@@ -1,0 +1,144 @@
+/* reset-css 可以忽略 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a:link,
+a:hover {
+    text-decoration: none;
+}
+
+.clearfix:after {
+    /*伪元素是行内元素 正常浏览器清除浮动方法*/
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+    /*ie6清除浮动的方式 *号只有IE6-IE7执行，其他浏览器不执行*/
+}
+
+body {
+    background: var(--color-whiteblock);
+}
+
+.title {
+    color: var(--color-blockwhite);
+    padding-bottom: 30px;
+}
+
+.content {
+    width: 1200px;
+    margin: 70px auto;
+}
+
+.video-img img {
+    width: 100%;
+    max-height: 335px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.content ul li {
+    float: left;
+    width: 25%;
+}
+
+.content ul li .box {
+    padding: 15px;
+}
+
+.video-ct {
+    padding: 15px;
+}
+
+.content ul li .video-box {
+    background: var(--color-three);
+    border-radius: 10px;
+    box-shadow: 0 1px 20px 0 rgb(0 125 255 / 14%);
+}
+
+.content ul li .video-txt {
+    font-size: 16px;
+    line-height: 1.7;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+
+.video-name {
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.video-name,
+.video-txt {
+    color: var(--color-blockwhite);
+}
+
+.button,
+.title {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    background: #000;
+}
+
+.on-of {
+    cursor: pointer;
+    font-family: "iconfont" !important;
+    font-size: 30px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    color: #23527c;
+}
+
+.on-of::after {
+    content: '\e692';
+    color: #fff;
+}
+
+
+/* 正常模式 */
+
+:root {
+    --color-whiteblock: #ffffff;
+    /*正常模式下颜色为白色*/
+    --color-blockwhite: #000000;
+    --color-one: #efeefd;
+    --color-two: #fafafa;
+    --color-three: #ffffff;
+}
+
+
+/* 深色模式 */
+
+[data-theme='dark'] {
+    --color-whiteblock: #161B2A;
+    /*开启深色模式颜色为黑色*/
+    --color-blockwhite: #ffffff;
+    --color-one: #070615;
+    --color-two: #161b2a;
+    --color-three: #070615;
+}
